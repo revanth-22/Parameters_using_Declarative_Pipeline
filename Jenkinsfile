@@ -36,7 +36,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM', 
-                    branches: [[name: '*/main']], 
+                    branches: [[name: '*/master']], 
                     userRemoteConfigs: [[url: 'https://github.com/revanth-citibank/Parameters_using_Declarative_Pipeline.git']]
                 ])
             }
