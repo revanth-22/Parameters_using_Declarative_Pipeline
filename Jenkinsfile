@@ -1,6 +1,3 @@
-properties([
-    buildDiscarder(logRotator(daysToKeepStr: '3', numToKeepStr: '3')),
-])
 pipeline {
     agent any
     stages {
@@ -9,6 +6,7 @@ pipeline {
                 script { 
                     properties([
                         parameters([
+			    buildDiscarder(logRotator(daysToKeepStr: '3', numToKeepStr: '3')),
                             choice(
                                 choices: ['ONE', 'TWO'], 
                                 name: 'PARAMETER_01'
