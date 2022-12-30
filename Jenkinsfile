@@ -5,8 +5,8 @@ pipeline {
             steps {
                 script { 
                     properties([
+		        buildDiscarder(logRotator(daysToKeepStr: '3', numToKeepStr: '3')),
                         parameters([
-			    buildDiscarder(logRotator(daysToKeepStr: '3', numToKeepStr: '3')),
                             choice(
                                 choices: ['ONE', 'TWO'], 
                                 name: 'PARAMETER_01'
