@@ -37,7 +37,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM', 
                     branches: [[name: '*/main']], 
-                    userRemoteConfigs: [[url: 'https://github.com/revanth-citibank/AxisBank-2023-NewYear.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/revanth-citibank/Parameters_using_Declarative_Pipeline.git']]
                 ])
             }
         }
